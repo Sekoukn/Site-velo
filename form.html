@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="contact.php" method="post">
+        <fieldset>
+            <legend>Etat Civil</legend>
+            <div class="genre">
+                <label for="">Femme</label>
+                <input type="radio" name="genre" id="femme">
+
+                <label for="">Homme</label>
+                <input type="radio" name="genre" id="homme">
+            </div>
+            <!-- <label for="">Homme</label>
+            <input type="text" name="nom" id="nom"> -->
+
+
+            <input type="text" name="nom" id="nom" placeholder="votre nom" required aria-placeholder="Votre nom">
+
+
+
+        </fieldset>
+          <fieldset>
+            <legend>Vos Coordonnées</legend>
+            <input type="email" name="email" id="email" placeholder="Votre Email"
+            aria-placeholder="Votre email" required autocomplete>
+
+            <input type="tel" name="phone" id="telephone" placeholder="Votre Téléphone"
+            aria-placeholder="VotreTéléphone">
+          </fieldset>
+
+          <fieldset>
+            <legend>Vos besoins</legend>
+
+            <select name="objet" id="objet">
+
+                <option value="#">Selectionner</option>
+
+                <option value="rdv">Rendez-vous</option>
+                <option value="call">Telephone</option>
+                <option value="come">Venir</option>
+                <option value="slim">Jean Homme</option>
+            </select>
+
+            <textarea name="message" id="msg" required placeholder="Merci de nous expliquer vos besoins..."></textarea>
+          
+             
+          <div class="genre">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="html" name="html">
+
+            <label for="css">CSS</label>
+            <input type="checkbox" id="css" name="css">
+
+            <label for="js">JS</label>
+            <input type="checkbox" id="js" name="js">
+          </div>
+        </fieldset> 
+  
+        <label for="captcha">
+            Merci de repondre à la question
+        </label>
+
+        <input type="text" id="capcha" placeholder="2 + 2" pattern="4" required>
+
+        <input type="submit" value="envoyer">
+    </form>
+</body>
+</html>
