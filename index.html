@@ -5,19 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
+  <SCRIPT LANGUAGE="JavaScript">  
+    function disableselect(e){ 
+    return false 
+    } 
+    
+    function reEnable(){ 
+    return true 
+    } 
+    
+    //if IE4+ 
+    document.onselectstart=new Function ("return false") 
+    document.oncontextmenu=new Function ("return false") 
+    //if NS6 
+    if (window.sidebar){ 
+    document.onmousedown=disableselect 
+    document.onclick=reEnable 
+    } 
+  
+    </script>
   <title>Document</title>
 </head>
-<body><header>
-    <a href="index.html"
-      ><img src="assets/img/logo.svg" alt="VeloEnSeine"
-    /></a>
+<body>
+  <header>
     
     
+  <a href="index.html"><img src="assets/img/logo.svg" alt="VeloEnSeine"/></a>
  
     <nav>
-      <div class="logo">
-          
-      </div>
+      
+        <a href="index.html"><img src="assets/img/logo.svg" alt="VeloEnSeine"/></a>  
+     
       <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
@@ -193,7 +211,9 @@
       </section>
 
       <section class="apple">
+        
         <article class="h">
+          
           <figure><img src="assets/img/profil.jpg" alt=""></figure>
           <p>151K Abonnés | 21 abonnements </p>
           <h2>Mohamed_Gloire</h2>
@@ -214,7 +234,14 @@
           </div>
         </article>
         <article class="b">
+         <div class="hov">
+          <p>En train de lire</p>
+           <p>Lu</p>
+           <p>A lire</p>
+           <p>Wishlist</p>
+ 
 
+         </div>
           <figure>
             <img src="" alt="">
           </figure>
